@@ -15,8 +15,7 @@ if Config.LEGEND_STRING:
     session = StringSession(Config.LEGEND_STRING)
 else:
     print("No String Session found. Quitting...")
-    return
-
+    
 try:
     Legend = TelegramClient(
         session=session,
