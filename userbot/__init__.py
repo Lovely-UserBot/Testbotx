@@ -14,8 +14,8 @@ from .k import *
 if Config.LEGEND_STRING:
     session = StringSession(Config.LEGEND_STRING)
 else:
-    raise Exception("No String Session found. Quitting...")
-    return session
+    print("No String Session found. Quitting...")
+    return
 
 try:
     Legend = TelegramClient(
