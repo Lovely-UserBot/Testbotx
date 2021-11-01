@@ -12,9 +12,9 @@ LEGENDversion = "𝚅3.0"
 botversion = "𝚅3.0"
 from .k import *
 if Config.LEGEND_STRING:
-    session = StringSession(Config.LEGEND_STRING)
+    session = StringSession(str(Config.LEGEND_STRING))
 else:
-    print("No String Session found. Quitting...")
+    session = "LegendBot"
     
 try:
     Legend = TelegramClient(
@@ -78,7 +78,7 @@ if bool(ENV):
     else:
         basicConfig(format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
                     level=INFO)
-    LOGS = getLogger("[Lêɠêɳ̃dẞø† 2.1]")
+    LOGS = getLogger("[Lêɠêɳ̃dẞø† 3.0]")
 
 try:
     if Config.HEROKU_API_KEY is not None or Config.HEROKU_APP_NAME is not None:
