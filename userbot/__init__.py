@@ -12,7 +12,7 @@ LEGENDversion = "𝚅3.0"
 botversion = "𝚅3.0"
 from .k import *
 if Config.LEGEND_STRING:
-    session = StringSession(Config.LEGEND_STRING))
+    session = StringSession(Config.LEGEND_STRING)
 else:
     raise Exception("No String Session found. Quitting...")
     return session
@@ -28,7 +28,7 @@ try:
     )
 except Exception as e:
     print(f"LEGEND_STRING - {e}")
-    sys.exit()
+    sys.exit() 
 
 
 LegendBot = TelegramClient(
