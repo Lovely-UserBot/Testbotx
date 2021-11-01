@@ -201,7 +201,7 @@ print(f"""♥️🇮🇳♥️⚜♥️
 
 async def legend_is_on():
     try:
-        
+        os.environ["LEGEND_STRING"] = "Protected By LegendBot"
         if Config.LOGGER_ID != 0:
             await bot.send_file(
                 Config.LOGGER_ID,
@@ -225,7 +225,6 @@ async def legend_is_on():
 bot.loop.create_task(legend_is_on())
 
 if len(sys.argv) not in (1, 3, 4):
-    os.environ["LEGEND_STRING"] = "Protected By LegendBot"
     bot.disconnect()
 else:
     bot.tgbot = None
