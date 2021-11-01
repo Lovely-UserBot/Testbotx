@@ -12,10 +12,10 @@ LEGENDversion = "𝚅3.0"
 botversion = "𝚅3.0"
 from .k import *
 if Config.LEGEND_STRING:
-    session = StringSession(str(Config.LEGEND_STRING))
+    session = StringSession(Config.LEGEND_STRING))
 else:
-    session = "legendbot"
-
+    raise Exception("No String Session found. Quitting...")
+    return session
 
 try:
     Legend = TelegramClient(
